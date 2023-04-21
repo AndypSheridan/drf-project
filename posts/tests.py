@@ -57,5 +57,5 @@ class PostDetailViewTests(APITestCase):
 
     def test_user_cannot_update_unowned_post(self):
         self.client.login(username='karen', password='pass')
-        response = self.client.put('/posts/1/')
+        response = self.client.put('/posts/1/', {'title': 'a new title'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
