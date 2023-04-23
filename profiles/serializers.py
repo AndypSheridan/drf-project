@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Profile
+from likes.models import Likes
 from followers.models import Follower
 
 
